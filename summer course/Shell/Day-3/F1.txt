@@ -1,0 +1,10 @@
+0.txt
+1.sh
+2.sh
+F1.txt
+a.txt
+b.txt
+f1
+f2
+f3
+mv.sh

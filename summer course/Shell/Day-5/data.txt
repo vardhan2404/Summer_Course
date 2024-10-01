@@ -1,0 +1,15 @@
+apple,fruit,red
+banana,fruit,yellow
+orange,fruit,orange
+grape,fruit,purple
+kiwi,fruit,brown
+melon,fruit,green
+pineapple,fruit,yellow
+strawberry,fruit,red
+blueberry,fruit,blue
+raspberry,fruit,red
+blackberry,fruit,black
+peach,fruit,orange
+plum,fruit,purple
+mango,fruit,yellow
+pomegranate,fruit,red

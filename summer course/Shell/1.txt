@@ -1,0 +1,86 @@
+Only requirement for a file to be shell script is exexute permission
+
+certain shell gives certain benifits. So its better to write the shell where we want to execute at.
+
+list of commands: cd, ls, mkdir, touch, cat, echo, pwd, man
+
+cd - change directory
+cd ./day1 - 
+touch <file_name> - creates a file with name <file_name>
+cat - stands for concatinate - can concatinate 2 file or a text to the file 
+usage of cd:
+    cd . - stays in same directory
+    cd ..
+    cd ../..
+    cd - goes to root directory
+
+usage of ls:
+    ls -a: shows hidden files/folders
+    ls -l: details about files
+
+$SHELL - stores the name default shell (like default browser being edge)
+The /etc directory is contained in the root directory. It stores storage system configuration files, executables required to boot the system, and some log files.
+
+chmod +x <file_name> - gives execute permission to owner of the file
+
+%t - time | %h-%m-%s - time 
+
+wc - word count
+
+x=$abc -> stores string abc in variable x
+x=$(<commnd>) -> stores output of shell command in variable x
+x=$((2+2)) -> stores output of math operation 2+2 in variable x in int
+$1 -> stores the first command line argument
+
+pwd - present working directory
+
+pipes can be used to send data from one command to other command
+
+${#variable} is used for length when you need to include spaces
+
+expr length "hello world"  => output: 11
+x = "hello world"
+expr length x  => output: expr: syntax error: unexpected argument ‘world’
+echo ${#x}
+
+the no. of commandline arguments are in $#
+the commandline arguments are stored in $@
+
+environment variables = $PATH, $HOME, $USER
+
+sed "s/hi/hey/g" a.txt => s - substitute | hi - word to be replaced | hey - word to be replaced with | g - global -> means to replace all instances of hi with hey
+sed "/hi/d" a.txt => deletes all instances of hi
+sed "s/$/hey/" a.txt => appends hey to the end of every line (we are asking to substitute $ with hey)
+sed "s/^/hey/" a.txt => 
+ 
+adduser <uname>                       ==>
+sudo adduser -uid <uid> <uname>       ==>
+cat /etc/passwd/ | wc -l              ==>    
+deluser --remove-all-FILES            ==>    deletes a user 
+passwd                                ==>    change password of root user
+passwd <uname>                        ==>    change password of a specific user
+passwd --expire <uname>               ==>    create a one-time-password for a user
+ps                                    ==>    shows list of processes
+ps -u <uname>                         ==>    shows list of processes of a particular user
+top                                   ==>    info about processes
+kill <pid>                            ==>    kills process with id pid
+pkill -u <uname>                      ==>    kills all processes of a user
+uptime                                ==>    how long system has been on
+watch -n <timer> <command>            ==>    updates the output of command every <timer> secondsex: watch -n 1 uptime
+free                                  ==>    info about memory
+vmstat                                ==>    info about virtual memory
+
+cron
+crontab -e
+tar
+tar -czvf
+
+curl -sSO => s -> silent : don't show progress or error messages; S -> Show error messages; O -> maintain the original file name for the downloaded file
+commands for automation:
+    cron => recurring job scheduler
+    at => non-recurring job scheduler
+    make 
+makefile
+wget and curl
+ssh
+scp
